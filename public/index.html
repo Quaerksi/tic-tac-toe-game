@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Tic-Tac-Toe</title>
+  <link rel="shortcut icon" href="#" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="/style.css" media="screen" />
+  <script type="text/javascript" src="socket.io/socket.io.js"></script>
+  <script type="text/javascript" src="client.js" defer></script>
+</head>
+
+<body>
+  <script>
+      const socket = io.connect();
+      socket.on('relode', () => window.location.reload(true));
+  </script>
+  <h1>Tic-Tac-Toe</h1>
+
+  <div>
+    <p id="info1"></p>
+    <p id="info2"></p>
+  </div>
+  <table id="matchfield"></table>
+  <div id="status"></div>
+
+
+</body>
+
+</html>
